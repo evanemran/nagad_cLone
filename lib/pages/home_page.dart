@@ -22,6 +22,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+  Color item1color = Colors.deepOrange;
+  Color item2color = Colors.grey;
+  Color item3color = Colors.grey;
+  Color item4color = Colors.grey;
 
   static const List<Widget> _bottomMenu = <Widget>[
     HomeBody(),
@@ -38,21 +42,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: _bottomMenu.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/ic_home_active.png"), color: Colors.grey, size: 24,),
+            icon: ImageIcon(const AssetImage("assets/ic_home_active.png"), color: item1color, size: 24,),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/ic_transactions_active.png"), color: Colors.grey, size: 24,),
+            icon: ImageIcon(const AssetImage("assets/ic_transactions_active.png"), color: item2color, size: 24,),
             label: 'Transaction',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/ic_people.png"), color: Colors.grey, size: 24,),
+            icon: ImageIcon(const AssetImage("assets/ic_people.png"), color: item3color, size: 24,),
             label: 'Contacts',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage("assets/ic_my_nagad.png"), color: Colors.grey, size: 24,),
+            icon: ImageIcon(const AssetImage("assets/ic_my_nagad.png"), color: item4color, size: 24,),
             label: 'My Nagad',
           ),
         ],
@@ -61,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: Colors.deepOrange,
         showSelectedLabels: true,
         selectedIconTheme: const IconThemeData(color: Colors.deepOrange),
+        unselectedIconTheme: const IconThemeData(color: Colors.grey),
         onTap: _onItemTapped,
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -69,6 +74,32 @@ class _MyHomePageState extends State<MyHomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      switch(index) {
+        case 0:
+          item1color = Colors.deepOrange;
+          item2color = Colors.grey;
+          item3color = Colors.grey;
+          item4color = Colors.grey;
+          break;
+        case 1:
+          item1color = Colors.grey;
+          item2color = Colors.deepOrange;
+          item3color = Colors.grey;
+          item4color = Colors.grey;
+          break;
+        case 2:
+          item1color = Colors.grey;
+          item2color = Colors.grey;
+          item3color = Colors.deepOrange;
+          item4color = Colors.grey;
+          break;
+        case 3:
+          item1color = Colors.grey;
+          item2color = Colors.grey;
+          item3color = Colors.grey;
+          item4color = Colors.deepOrange;
+          break;
+      }
     });
   }
 }
