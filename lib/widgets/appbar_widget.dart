@@ -52,7 +52,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
                               AnimatedOpacity(
                                   opacity: _isBalanceShown ? 1 : 0,
                                   duration: Duration(milliseconds: 500),
-                                  child: Text('৳7500.25',
+                                  child: const Text('৳7500.25',
                                       style: TextStyle(
                                           color: Colors.deepOrange, fontSize: 14, fontWeight: FontWeight.bold)
                                   , textAlign: TextAlign.center,)),
