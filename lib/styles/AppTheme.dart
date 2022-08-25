@@ -8,4 +8,7 @@ class AppTheme {
 
   static final TextStyle actionBarText =
   TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold, color: Colors.white,fontFamily: "Roboto");
+
+  static final TextStyle monthText =
+  TextStyle(fontSize: 18.0,fontWeight:FontWeight.normal, color: Colors.black87,fontFamily: "Roboto");
 }
