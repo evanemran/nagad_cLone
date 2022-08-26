@@ -22,7 +22,7 @@ class TransactionListItem extends StatelessWidget {
             const SizedBox(width: 12,),
             Expanded(child: Column(children: [
               Row(children: [Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text(item.tTitle, style: AppTheme.tTitleText, textAlign: TextAlign.start,),)),
-                Text(item.tAmt, style: AppTheme.tAmtText, textAlign: TextAlign.start,)],),
+                Image.asset(getCurrencyIcon(item.tType), height: 14, width: 14,),Text(item.tAmt, style: getStyle(item.tType), textAlign: TextAlign.start,)],),
               Row(children: [Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text(item.tBody, style: AppTheme.tBodyText, textAlign: TextAlign.start,),)),
                 Text(item.tTime, style: AppTheme.tTimeText, textAlign: TextAlign.start,)],),
             ],)),
@@ -32,6 +32,24 @@ class TransactionListItem extends StatelessWidget {
           //Row(children: [Expanded(child: Padding(padding: const EdgeInsets.fromLTRB(0, 8, 0, 8), child: Text(item.nBody, style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],)
         ],
       ),),);
+  }
+
+  getStyle(String tType) {
+    if(tType == "IN"){
+      return AppTheme.inAmtText;
+    }
+    else{
+      return AppTheme.outAmtText;
+    }
+  }
+
+  String getCurrencyIcon(String tType) {
+    if(tType == "IN"){
+      return "assets/ic_transactions_in_taka.png";
+    }
+    else{
+      return "assets/ic_transactions_out_taka.png";
+    }
   }
 
 }

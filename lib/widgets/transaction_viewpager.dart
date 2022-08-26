@@ -16,35 +16,35 @@ class TransactionViewpager extends StatefulWidget {
 
 class _TransactionViewpagerState extends State<TransactionViewpager> {
   List<Transactions> allTransactionList = [
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Received Money", tBody: "Anik", tTime: "Aug 12, 11:27 AM", tAmt: "2050", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Top-up", tBody: "Robi", tTime: "Aug 12, 11:27 AM", tAmt: "100", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "5000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "300", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1500", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Received Money", tBody: "Anik", tTime: "Aug 12, 11:27 AM", tAmt: "2050", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Top-up", tBody: "Robi", tTime: "Aug 12, 11:27 AM", tAmt: "100", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "5000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "300", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1500", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
   ];
 
   List<Transactions> inTransactionList = [
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Received Money", tBody: "Anik", tTime: "Aug 12, 11:27 AM", tAmt: "2050", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "5000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "300", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1500", tAmtIcon: "assets/ic_transactions_in_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Received Money", tBody: "Anik", tTime: "Aug 12, 11:27 AM", tAmt: "2050", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "5000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "300", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "1500", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_in.png", tTitle: "Cash In", tBody: "Sk Telecoms", tTime: "Aug 12, 11:27 AM", tAmt: "3000", tAmtIcon: "assets/ic_transactions_in_taka.png", tType: "IN"),
   ];
 
   List<Transactions> outTransactionList = [
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
-    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
+    Transactions(tId: 0, tIcon: "assets/ic_transactions_out.png", tTitle: "Payment", tBody: "Star Cineplex", tTime: "Aug 13, 10:29 PM", tAmt: "1200", tAmtIcon: "assets/ic_transactions_out_taka.png", tType: "OUT"),
   ];
 
 

@@ -26,4 +26,10 @@ class AppTheme {
 
   static final TextStyle tTimeText =
   TextStyle(fontSize: 12.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
+
+  static final TextStyle inAmtText =
+  TextStyle(fontSize: 14.0,fontWeight:FontWeight.bold, color: Colors.green,fontFamily: "Roboto");
+
+  static final TextStyle outAmtText =
+  TextStyle(fontSize: 14.0,fontWeight:FontWeight.bold, color: Colors.red,fontFamily: "Roboto");
 }
