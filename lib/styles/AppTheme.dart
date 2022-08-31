@@ -40,14 +40,17 @@ class AppTheme {
   TextStyle(fontSize: 14.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
 
   static final TextStyle amtHintText =
-  TextStyle(fontSize: 20.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
+  TextStyle(fontSize: 18.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
 
   static final TextStyle amtText =
-  TextStyle(fontSize: 20.0,fontWeight:FontWeight.normal, color: Colors.deepOrange,fontFamily: "Roboto");
+  TextStyle(fontSize: 18.0,fontWeight:FontWeight.normal, color: Colors.black,fontFamily: "Roboto");
 
   static final TextStyle avlAmtText2 =
   TextStyle(fontSize: 16.0,fontWeight:FontWeight.normal, color: Colors.black,fontFamily: "Roboto");
 
   static final TextStyle hintText =
   TextStyle(fontSize: 12.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
+
+  static final TextStyle sendFinalText =
+  TextStyle(fontSize: 16.0,fontWeight:FontWeight.normal, color: Colors.deepOrange,fontFamily: "Roboto");
 }
