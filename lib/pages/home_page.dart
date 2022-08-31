@@ -7,7 +7,7 @@ import 'package:nagad_clone/widgets/transaction_widget.dart';
 
 import '../enums/home_menu.dart';
 import '../widgets/appbar_widget.dart';
-import '../widgets/contacts_widget.dart';
+import '../widgets/contacts_body.dart';
 import '../widgets/home_menu_widget.dart';
 import '../widgets/profile_widget.dart';
 

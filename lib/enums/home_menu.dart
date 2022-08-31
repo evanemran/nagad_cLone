@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:nagad_clone/styles/AppText.dart';
 
+import '../widgets/send_money_widget.dart';
+
 enum HomeMenu {
   //top menu
-  SEND_MONEY('Send Money', 'assets/ic_sendmoney.png', Text(AppText.placeholder)),
+  SEND_MONEY('Send Money', 'assets/ic_sendmoney.png', SendMoneyWidget()),
   CASH_OUT('Cash Out', 'assets/ic_cash_out.png', Text(AppText.placeholder)),
   MOBILE_RECHARGE('Top-up', 'assets/ic_mobile_recharge.png', Text(AppText.placeholder)),
   ADD_MONEY('Add Money', 'assets/ic_add_money_normal.png', Text(AppText.placeholder)),

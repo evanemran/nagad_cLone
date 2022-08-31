@@ -19,11 +19,7 @@ class MenuWidget extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
-          IconButton(
-            icon: Image.asset(image),
-            iconSize: 80,
-            onPressed: () {},
-          ),
+          Image.asset(image, height: 80, width: 80,),
           SizedBox(height: 5.0),
           Text(title,
               style: const TextStyle(fontSize: 12.0,color: Colors.black45,),

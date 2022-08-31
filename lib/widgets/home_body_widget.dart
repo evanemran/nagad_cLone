@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../enums/home_menu.dart';
+import '../pages/details_page.dart';
 import 'appbar_widget.dart';
 import 'home_menu_widget.dart';
 
@@ -78,14 +79,16 @@ class _HomeBodyState extends State<HomeBody> {
               physics: const NeverScrollableScrollPhysics(),
               // Generate 100 widgets that display their index in the List.
               children: List.generate(homeMenuList.length, (index) {
-                return Center(
-                  child: InkWell(child: MenuWidget(title: homeMenuList[index].title, image: homeMenuList[index].icon),
-                    onTap: () {
-                      /*Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailsPage(menu: homeMenuList[index],)),
-                      );*/
-                    },),
+                return InkWell(
+                  child: Center(
+                    child: MenuWidget(title: homeMenuList[index].title, image: homeMenuList[index].icon),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailsPage(menu: homeMenuList[index],)),
+                    );
+                  },
                 );
               }),
             ),
@@ -93,7 +96,7 @@ class _HomeBodyState extends State<HomeBody> {
 
           Padding(
             padding: EdgeInsets.all(8.0),
-            child: Row(children: [const Expanded(child: Padding(padding: EdgeInsets.only(left: 12.0), child: Text('Payment'),)),],),
+            child: Row(children: const [Expanded(child: Padding(padding: EdgeInsets.only(left: 12.0), child: Text('Payment'),)),],),
           ),
           Container(
             color: Colors.white,
