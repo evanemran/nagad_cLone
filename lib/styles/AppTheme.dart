@@ -51,6 +51,9 @@ class AppTheme {
   static final TextStyle hintText =
   TextStyle(fontSize: 12.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
 
+  static final TextStyle searchHintText =
+  TextStyle(fontSize: 16.0,fontWeight:FontWeight.normal, color: Colors.black45,fontFamily: "Roboto");
+
   static final TextStyle sendFinalText =
   TextStyle(fontSize: 16.0,fontWeight:FontWeight.normal, color: Colors.deepOrange,fontFamily: "Roboto");
 }

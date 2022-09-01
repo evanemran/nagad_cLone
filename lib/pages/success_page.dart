@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../enums/home_menu.dart';
 import '../styles/AppTheme.dart';
 import 'confirm_page.dart';
+import 'home_page.dart';
 
 class SuccessPage extends StatefulWidget {
   const SuccessPage({Key? key, required this.menu}) : super(key: key);
@@ -22,6 +24,14 @@ class _SuccessPageState extends State<SuccessPage> {
         resizeToAvoidBottomInset : false,
         appBar: AppBar(
           centerTitle: true,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            // Status bar color
+            statusBarColor: Colors.deepOrange,
+
+            // Status bar brightness (optional)
+            statusBarIconBrightness: Brightness.light, // For Android (dark icons)
+            statusBarBrightness: Brightness.light, // For iOS (dark icons)
+          ),
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
@@ -67,14 +77,69 @@ class _SuccessPageState extends State<SuccessPage> {
                   Container(width: double.infinity, color: Colors.black12, height: 1,),
                   SizedBox(height: 10,),
 
-                  Row(children: [
-                    Expanded(child: Row(children: [Image.asset("assets/ic_phone.png", height: 24, width: 24,), SizedBox(width: 10,) , Text("Call", style: TextStyle(color: Colors.deepOrange, fontSize: 16,),)],)),
-                    Expanded(child: Row(children: [Image.asset("assets/ic_message.png", height: 24, width: 24,), SizedBox(width: 10,) , Text("Call", style: TextStyle(color: Colors.deepOrange, fontSize: 16,),)],)),
-                  ],),
+                  Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0), child: Row(children: [
+                    Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            WidgetSpan(
+                              child: Image.asset("assets/ic_phone.png", height: 24, width: 24,),
+                            ),
+                            WidgetSpan(child: SizedBox(width: 10)),
+                            TextSpan(
+                              text: "Call",
+                                style: TextStyle(color: Colors.deepOrange, fontSize: 18,)
+                            ),
+                          ],
+                        ),
+                      )
+                      ,
+                    ],),)),
+                    Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            WidgetSpan(
+                              child: Image.asset("assets/ic_message.png", height: 24, width: 24,),
+                            ),
+                            WidgetSpan(child: SizedBox(width: 10)),
+                            TextSpan(
+                                text: "Message",
+                                style: TextStyle(color: Colors.deepOrange, fontSize: 18,)
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],),)),
+                  ],),),
 
-                  SizedBox(height: 20,),
-                  Container(width: double.infinity, color: Colors.black12, height: 1,),
                   SizedBox(height: 10,),
+                  Container(width: double.infinity, color: Colors.black12, height: 1,),
+                  SizedBox(height: 20,),
+
+                  Container(
+                    margin: EdgeInsets.fromLTRB(36,12,36,12),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.deepOrange,
+                        border: Border.all(
+                            color: Colors.deepOrange,
+                            width: 2
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+                    child: InkWell(child: Padding(padding: EdgeInsets.all(8), child: Text("BACK TO HOME", style: TextStyle(color: Colors.white, fontSize: 18), textAlign: TextAlign.center,),),
+                      onTap: () {
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyHomePage(title: 'Nagad',)
+                            ),
+                            ModalRoute.withName("/Home")
+                        );
+                      },),),
+
+
 
                 ],
               ),

@@ -82,7 +82,7 @@ class _PinPageState extends State<PinPage> {
                       }
                     },
                     decoration: InputDecoration(hintText: "Reference", hintStyle: AppTheme.amtHintText),
-                    keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.text,
                     cursorColor: Colors.transparent,
                     textAlign: TextAlign.start,
                     style: AppTheme.amtText,

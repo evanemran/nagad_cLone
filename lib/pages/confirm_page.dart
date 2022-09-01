@@ -24,7 +24,7 @@ class _ConfirmPageState extends State<ConfirmPage> with SingleTickerProviderStat
   @override
   void initState() {
     _controller = AnimationController(
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 4),
       vsync: this,
     );
     _controller.addListener(() {
