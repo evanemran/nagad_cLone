@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nagad_clone/pages/success_page.dart';
 
 import '../enums/home_menu.dart';
 import '../styles/AppTheme.dart';
+import '../widgets/circular_button.dart';
 
 class ConfirmPage extends StatefulWidget {
   const ConfirmPage({Key? key, required this.menu}) : super(key: key);
@@ -13,10 +15,41 @@ class ConfirmPage extends StatefulWidget {
   State<ConfirmPage> createState() => _ConfirmPageState();
 }
 
-class _ConfirmPageState extends State<ConfirmPage> {
+class _ConfirmPageState extends State<ConfirmPage> with SingleTickerProviderStateMixin{
+  
+  var btnVisibility = true;
+  var loaderVisibility = false;
+  late AnimationController _controller;
 
   @override
+  void initState() {
+    _controller = AnimationController(
+      duration: const Duration(seconds: 5),
+      vsync: this,
+    );
+    _controller.addListener(() {
+      setState(() {
+        if(_controller.isCompleted){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const SuccessPage(menu: HomeMenu.SEND_MONEY,)),
+          );
+          _controller.reset();
+        }
+      });
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+  
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         resizeToAvoidBottomInset : false,
         appBar: AppBar(
@@ -41,7 +74,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                 ],),)
               ],),),
 
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
               //Amount
               Card(color: Colors.white, elevation: 2, child: Column(children: [
                 Padding(padding: EdgeInsets.fromLTRB(0, 24, 0, 24), child: Row(children: [
@@ -66,6 +99,31 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   ],),)),
                 ],),),
               ],),),
+
+              const SizedBox(height: 30,),
+
+              Visibility(visible: btnVisibility,child: Column(
+                children: [
+                  CircularButton(
+                    onComplete: () {
+                      setState(() {
+                        btnVisibility = false;
+                        loaderVisibility = true;
+                        _controller.forward();
+                      });
+                    },
+                  ),
+
+                  const SizedBox(height: 20,),
+                  Row(children: const [Expanded(child: Text('TAP AND HOLD TO CONFIRM', style: TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.bold, fontSize: 18), textAlign: TextAlign.center,))],)
+                ],
+              ),),
+              
+              Visibility(visible: loaderVisibility,child: RotationTransition(
+                turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
+                child: Image.asset("assets/ic_tx_progress.png", width: 80, height: 80,),
+              ),)
+              
             ],
           ),
         )

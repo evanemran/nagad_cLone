@@ -8,7 +8,7 @@ import '../styles/AppTheme.dart';
 List<ProfileItem> generalList = [
   ProfileItem(icon: "assets/ic_language.png", title: "Language", endWidget: const Text("English")),
   ProfileItem(icon: "assets/ic_account_type.png", title: "Account Type", endWidget: const Text("Regular")),
-  ProfileItem(icon: "assets/ic_offers.png", title: "I Want Profit", endWidget: const Text("NO")),
+  ProfileItem(icon: "assets/ic_profit.png", title: "I Want Profit", endWidget: const Text("NO")),
   ProfileItem(icon: "assets/ic_pin.png", title: "Change PIN", endWidget: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey,)),
   ProfileItem(icon: "assets/ic_mno.png", title: "Change Mobile Operator", endWidget: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey,)),
   ProfileItem(icon: "assets/ic_kyc_icon.png", title: "Re-submit KYC", endWidget: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey,)),
