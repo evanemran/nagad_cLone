@@ -1,6 +1,9 @@
-# nagad_clone
+# Nagad App Clone
 
-A new Flutter project.
+This is the clone of the popular MFS App "Nagad". 
+This project is for educational purpose only, Any commercial use is strictly restricted.
+
+<img src = "assets/nagad_cover.png">
 
 ## Getting Started
 
